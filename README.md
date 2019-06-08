@@ -1,1 +1,1 @@
-# Friend-Finder
+# FriendFinder
