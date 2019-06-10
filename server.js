@@ -11,8 +11,9 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
 // points server to route files to show how to respond when a user visit or request data from a URL
-require("./routing/apiRoutes")(app);
-require("./routing/htmlRoutes")(app);
+// require("./routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
+require("./app/routing/apiRoutes")(app);
 // tells express to listen for request and starts the server
 app.listen(port, function(){
     console.log("App listening on PORT: " + port)

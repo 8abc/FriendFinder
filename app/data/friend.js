@@ -1,0 +1,1 @@
+// holds friends data in an an array of ojbects with name, photo and score
