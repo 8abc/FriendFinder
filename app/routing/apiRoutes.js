@@ -1,6 +1,3 @@
-// require dependencies
-const path = require("path");
-
 // a GET route with the url /api/friends which displays a json of possible friends
 module.exports = function(app) {
     app.post

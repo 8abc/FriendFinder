@@ -1,5 +1,4 @@
-// require dependencies
-const path = require("path");
+var path = require("path");
 // a GET route to /survey which displays the survey page
 module.exports = function (app) {
     // brings up the survey page
@@ -8,6 +7,10 @@ module.exports = function (app) {
     });
     // bring up the home page
     app.get("/home" , function(req, res){
+        res.sendFile(path.join(__dirname, "../public/home.html"));
+    });
+    // if theres no matching route default to home
+    app.get("/*" , function(req, res){
         res.sendFile(path.join(__dirname, "../public/home.html"));
     });
 };
