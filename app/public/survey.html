@@ -14,17 +14,17 @@
     <!-- 10 questions and a scale 1 to 5 based on how much the user agrees or disgrees  -->
     <form>
         <div class="form-group">
-            <label for="name">Name</label>
+            <h5>Name (Required)</h5>
             <input type="name" class="form-control" id="name">  
         </div>
         <div class="form-group">
-            <label for="photo">Photo</label>
-            <input type="photo" class="form-control" id="photo"> 
+            <h5>Link to Photo Image (Required)</h5>
+            <input type="photoLink" class="form-control" id="photoLink"> 
         </div>
         <div class="form-group">
-            <h3>Question 1</h3>
-            <h5>Basketball is my favorite sport</h5>
+            <h5>1) Basketball is my favorite sport</h5>
             <select class="form-control" id="question1">
+                <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -33,9 +33,9 @@
             </select>
         </div>
         <div class="form-group">
-            <h3>Question 2</h3>
-            <h5>I enjoy traveling around the world</h5>
+            <h5>2) I enjoy traveling around the world</h5>
             <select class="form-control" id="question2">
+                <option value="empty">Select an Option</option>
                 <option>1 (Stronly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -44,9 +44,9 @@
             </select>
         </div>
         <div class="form-group">
-            <h3>Question 3</h3>
-            <h5>Video games are fun</h5>
+            <h5>3) Video games are fun</h5>
             <select class="form-control" id="question3">
+                <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -55,9 +55,9 @@
             </select>
         </div>
         <div class="form-group">
-            <h3>Question 4</h3>
-            <h5></h5>
+            <h5>4) You like to make people laugh</h5>
             <select class="form-control" id="question4">
+                <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -66,9 +66,9 @@
             </select>
         </div>
         <div class="form-group">
-            <h3>Question 5</h3>
-            <h5></h5>
+            <h5>5) You listen to music everyday</h5>
             <select class="form-control" id="question5">
+                <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -77,9 +77,9 @@
             </select>
         </div>
         <div class="form-group">
-            <h3>Question 6</h3>
-            <h5></h5>
+            <h5>6) Reading books is one of your hobbies </h5>
             <select class="form-control" id="question6">
+                <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -88,9 +88,9 @@
             </select>
         </div>
         <div class="form-group">
-            <h3>Question 7</h3>
-            <h5></h5>
+            <h5>7) Pickles are one of your favorite snacks</h5>
             <select class="form-control" id="question7">
+                <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -99,9 +99,9 @@
             </select>
         </div>
         <div class="form-group">
-            <h3>Question 8</h3>
-            <h5></h5>
+            <h5>8) You know how to swim</h5>
             <select class="form-control" id="question8">
+                <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -110,9 +110,9 @@
             </select>
         </div>
         <div class="form-group">
-            <h3>Question 9</h3>
-            <h5></h5>
+            <h5>9) You rather go out to eat, then cook at home</h5>
             <select class="form-control" id="question9">
+                <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -121,8 +121,9 @@
             </select>
         </div>
         <div class="form-group">
-            <h3>Question 10</h3>
+            <h5>10) You are difficult to upset</h5>
             <select class="form-control" id="question10">
+                <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -131,5 +132,6 @@
             </select>
         </div>
     </form>
+    <button type="button" class="btn btn-outline-danger btn-lg btn-block">Submit</button>
 </body>
 </html>
