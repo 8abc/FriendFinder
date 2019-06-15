@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
+     <!-- jquery cdn -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- bootstrap cdn -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <h1>Survey</h1>
-    <p>Take this quick survey to find your best match friend</p>
+    <h4>Take this quick survey to find your best match friend</h4>
     <!-- 10 questions and a scale 1 to 5 based on how much the user agrees or disgrees  -->
     <form>
         <div class="form-group">
@@ -132,6 +134,33 @@
             </select>
         </div>
     </form>
-    <button type="button" class="btn btn-outline-danger btn-lg btn-block">Submit</button>
+    <button type="button" id="submit" class="btn btn-outline-danger btn-lg btn-block">Submit</button>
+
+    <!-- modal -->
+
+<script src="text/javascript">
+
+    $("#submit").on("click", function(){
+        event.preventDefault();
+            var userInput = {
+                name: $("#name").val().trim(),
+                photo: $("#photoLink").val.trim(),
+                scores: [
+                    $("#question1").val(),
+                    $("#question2").val(),
+                    $("#question3").val(),
+                    $("#question4").val(),
+                    $("#question5").val(),
+                    $("#question6").val(),
+                    $("#question7").val(),
+                    $("#question8").val(),
+                    $("#question9").val(),
+                    $("#question10").val(),
+                ]
+            };
+            console.log(userInput);
+    });
+</script>
+
 </body>
-</html>
+</html>    
