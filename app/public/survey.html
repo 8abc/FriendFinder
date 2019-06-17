@@ -13,6 +13,7 @@
 <body>
     <h1>Survey</h1>
     <h4>Take this quick survey to find your best match friend</h4>
+    <hr>
     <!-- 10 questions and a scale 1 to 5 based on how much the user agrees or disgrees  -->
     <form>
         <div class="form-group">
@@ -23,6 +24,7 @@
             <h5>Link to Photo Image (Required)</h5>
             <input type="photoLink" class="form-control" id="photoLink"> 
         </div>
+        <br>
         <div class="form-group">
             <h5>1) Basketball is my favorite sport</h5>
             <select class="form-control" id="question1">
@@ -134,9 +136,15 @@
             </select>
         </div>
     </form>
-    <button type="button" id="submit" class="btn btn-outline-danger btn-lg btn-block">Submit</button>
+    <button type="button" id="submit" class="btn btn-secondary btn-lg btn-block">Submit</button>
 
     <!-- modal -->
+    <footer class="footer">
+        <div class="container">
+            <hr>
+            <p><a href="/api/friends">Friends API</a> | <a href="https://github.com/8abc/FriendFinder">GitHub</a></p>
+        </div>
+    </footer>
 
 <script type="text/javascript">
 

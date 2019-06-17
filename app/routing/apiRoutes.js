@@ -13,7 +13,7 @@ module.exports = function(app) {
         var bestMatch = {
             name: "",
             photo: "",
-            totalDifference: 1000,
+            totalDifference: 100,
         };
         // used to calculate difference between the user's score and the scores of each friend in the database
         var totalDifference = 0;

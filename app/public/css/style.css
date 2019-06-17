@@ -1,0 +1,7 @@
+body {
+    width : 75%;
+    margin: 0px auto;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}

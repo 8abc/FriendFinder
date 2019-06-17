@@ -7,15 +7,27 @@
     <title>Home</title>
     <!-- bootsrtrap cdn -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- font awesome cdn -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
 <body>
-    <div class="jumbotron">
-        <h1 class="display-4">Friend Finder</h1>
+    <div class="jumbotron" style="background: #ffa500">
+        <h1 class="text-center"><i class="fa fa-users"></i> Friend Finder</h1> 
         <hr class="my-4">
-        <p class="lead">Make a new friend</p>
-        <p>Fill out the survey</p>
-        <a href="/survey" class="btn btn-info btn-lg" id="startButton" role="button">Start</a>
+        <h2 class="text-center">Make a new friend</h2>
+        <h3 class="text-center">Fill out the survey</h3>
+        <div class="text-center">
+        <br>
+        <a href="/survey" class="btn btn-secondary btn-lg" id="startButton" role="button"><i class="fa fa-clipboard"></i> Survey</a>
+        </div>
       </div>
+
+      <footer class="footer">
+          <div class="container">
+              <hr>
+              <p><a href="/api/friends">Friends API</a> | <a href="https://github.com/8abc/FriendFinder">GitHub</a></p>
+          </div>
+      </footer>
 
 
    
