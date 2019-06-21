@@ -172,7 +172,7 @@
         event.preventDefault();
             var userInput = {
                 name: $("#name").val().trim(),
-                photo: $("#photoLink").val.trim(),
+                photo: $("#photoLink").val().trim(),
                 scores: [
                     $("#question1").val(),
                     $("#question2").val(),
@@ -187,6 +187,16 @@
                 ]
             };
             console.log(userInput);
+
+            $.post("/api/friends", userInput)
+                .done(function (response) {
+                    
+                    console.log(response);
+                })
+                .catch(function(error){
+                    console.log(error);
+                })
+            
     });
 </script>
 

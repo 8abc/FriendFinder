@@ -23,22 +23,23 @@ module.exports = function(app) {
             var friend = friends[i];
             totalDifference = 0;
             // loops through each friend's score
-        for (var x=0; i<friend.scores.length; x++) {
-            var friendScore = friend.scores[x];
-            var userScore = userScores[x];
-            // calculates the difference between the scores and sum them into totalDifference
-            totalDifference += Math.abs(parseInt(userScore)- parseInt(friendScore));
-        }
-        // show if the difference is less then the differences of the current best match
-        if(totalDifference <= bestMatch.friendDifference) {
-            // reset bestMatch to be the new friend
-            bestMatch.name = friend.name;
-            bestMatch.photo = friend.photo;
-            bestMatch.friendDifference = totalDifference;
-        }
+            for (var x=0; x<friend.scores.length; x++) {
+                var friendScore = friend.scores[x];
+                var userScore = userScores[x];
+                // calculates the difference between the scores and sum them into totalDifference
+                totalDifference += Math.abs(parseInt(userScore)- parseInt(friendScore));
+            }
+            // show if the difference is less then the differences of the current best match
+            if(totalDifference <= bestMatch.totalDifference) {
+                // reset bestMatch to be the new friend
+                bestMatch.name = friend.name;
+                bestMatch.photo = friend.photo;
+                bestMatch.totalDifference = totalDifference;
+            }
         
-    }
+        }
         // saves user's input into database
+        console.log("got here");
         friends.push(userInput);
     // returns a JSON with the user's bestMatch
         res.json(bestMatch);
