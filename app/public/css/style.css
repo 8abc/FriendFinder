@@ -1,7 +1,16 @@
-body {
+/* body {
     width : 75%;
     margin: 0px auto;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+} */
+/* form title */
+h1 {
+    margin-top: 15px;
+}
+/* form */
+form {
+   padding: 150px 200px 200px 200px;
+    background-color: #ffa500;
 }

@@ -9,13 +9,17 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- bootstrap cdn -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!-- Chosen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 </head>
 <body>
-    <h1>Survey</h1>
-    <h4>Take this quick survey to find your best match friend</h4>
+    <h1 class="text-center">Survey</h1>
+    <h4 class="text-center">Take this quick survey to find your best match friend</h4>
     <hr>
     <!-- 10 questions and a scale 1 to 5 based on how much the user agrees or disgrees  -->
-    <form>
+    <form class="text-center">
         <div class="form-group">
             <h5>Name (Required)</h5>
             <input type="name" class="form-control" id="name">  
@@ -27,7 +31,7 @@
         <br>
         <div class="form-group">
             <h5>1) Basketball is my favorite sport</h5>
-            <select class="form-control" id="question1">
+            <select class="chosen-select" id="question1">
                 <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
@@ -38,7 +42,7 @@
         </div>
         <div class="form-group">
             <h5>2) I enjoy traveling around the world</h5>
-            <select class="form-control" id="question2">
+            <select class="chosen-select" id="question2">
                 <option value="empty">Select an Option</option>
                 <option>1 (Stronly Disagree)</option>
                 <option>2</option>
@@ -49,7 +53,7 @@
         </div>
         <div class="form-group">
             <h5>3) Video games are fun</h5>
-            <select class="form-control" id="question3">
+            <select class="chosen-select" id="question3">
                 <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
@@ -60,7 +64,7 @@
         </div>
         <div class="form-group">
             <h5>4) You like to make people laugh</h5>
-            <select class="form-control" id="question4">
+            <select class="chosen-select" id="question4">
                 <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
@@ -71,7 +75,7 @@
         </div>
         <div class="form-group">
             <h5>5) You listen to music everyday</h5>
-            <select class="form-control" id="question5">
+            <select class="chosen-select" id="question5">
                 <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
@@ -82,7 +86,7 @@
         </div>
         <div class="form-group">
             <h5>6) Reading books is one of your hobbies </h5>
-            <select class="form-control" id="question6">
+            <select class="chosen-select" id="question6">
                 <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
@@ -93,7 +97,7 @@
         </div>
         <div class="form-group">
             <h5>7) Pickles are one of your favorite snacks</h5>
-            <select class="form-control" id="question7">
+            <select class="chosen-select" id="question7">
                 <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
@@ -104,7 +108,7 @@
         </div>
         <div class="form-group">
             <h5>8) You know how to swim</h5>
-            <select class="form-control" id="question8">
+            <select class="chosen-select" id="question8">
                 <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
@@ -115,7 +119,7 @@
         </div>
         <div class="form-group">
             <h5>9) You rather go out to eat, then cook at home</h5>
-            <select class="form-control" id="question9">
+            <select class="chosen-select" id="question9">
                 <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
@@ -126,7 +130,7 @@
         </div>
         <div class="form-group">
             <h5>10) You are difficult to upset</h5>
-            <select class="form-control" id="question10">
+            <select class="chosen-select" id="question10">
                 <option value="empty">Select an Option</option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
@@ -136,28 +140,29 @@
             </select>
         </div>
     </form>
-    <button type="button" id="submit" class="btn btn-secondary btn-lg btn-block">Submit</button>
+    <button type="button" id="submit" class="btn btn-secondary btn-sm btn-block">Submit</button>
 
-    <!-- modal -->
-    <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Best Match</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <h2 id="matchName"></h2>
-              <img id="matchPhoto" src="" alt="">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
+     <!-- Modal -->
+  <div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="matchName"></h2>
+          <img id="matchPhoto" src="#" alt="">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
+
+    </div>
+  </div>
       <!-- footer -->
     <footer class="footer">
         <div class="container">
@@ -165,40 +170,85 @@
             <p><a href="/api/friends">Friends API</a> | <a href="https://github.com/8abc/FriendFinder">GitHub</a></p>
         </div>
     </footer>
-
-<script type="text/javascript">
-
-    $("#submit").on("click", function(){
+    <script type="text/javascript">
+        // Chosen CSS
+        var config = {
+        ".chosen-select": {},
+        ".chosen-select-deselect": {
+          allow_single_deselect: true
+        },
+        ".chosen-select-no-single": {
+          disable_search_threshold: 10
+        },
+        ".chosen-select-no-results": {
+          no_results_text: "Oops, nothing found!"
+        },
+        ".chosen-select-width": {
+          width: "95%"
+        }
+      };
+  
+      for (var selector in config) {
+        $(selector).chosen(config[selector]);
+      }
+  
+      // Capture the form inputs
+      $("#submit").on("click", function(event) {
         event.preventDefault();
-            var userInput = {
-                name: $("#name").val().trim(),
-                photo: $("#photoLink").val().trim(),
-                scores: [
-                    $("#question1").val(),
-                    $("#question2").val(),
-                    $("#question3").val(),
-                    $("#question4").val(),
-                    $("#question5").val(),
-                    $("#question6").val(),
-                    $("#question7").val(),
-                    $("#question8").val(),
-                    $("#question9").val(),
-                    $("#question10").val(),
-                ]
-            };
-            console.log(userInput);
-
-            $.post("/api/friends", userInput)
-                .done(function (response) {
-                    
-                    console.log(response);
-                })
-                .catch(function(error){
-                    console.log(error);
-                })
-            
-    });
-</script>
-
+  
+        // Form validation
+        function validateForm() {
+          var isValid = true;
+          $(".form-control").each(function() {
+            if ($(this).val() === "") {
+              isValid = false;
+            }
+          });
+  
+          $(".chosen-select").each(function() {
+  
+            if ($(this).val() === "") {
+              isValid = false;
+            }
+          });
+          return isValid;
+        }
+  
+        // If all required fields are filled
+        if (validateForm()) {
+          // Create an object for the user"s data
+          var userInput = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [
+              $("#q1").val(),
+              $("#q2").val(),
+              $("#q3").val(),
+              $("#q4").val(),
+              $("#q5").val(),
+              $("#q6").val(),
+              $("#q7").val(),
+              $("#q8").val(),
+              $("#q9").val(),
+              $("#q10").val()
+            ]
+          };
+  
+          // AJAX post the data to the friends API.
+          $.post("/api/friends", userInput, function(data) {
+  
+            // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+            $("#matchName").text(data.name);
+            $("#matchPhoto").attr("src", data.photo);
+  
+            // Show the modal with the best match
+            $("#results-modal").modal("toggle");
+  
+          });
+        } else {
+          alert("Please fill out all fields before submitting!");
+        }
+      });
+      </script>
 </body>
 </html>    
