@@ -15,6 +15,7 @@ module.exports = function(app) {
         };
         // holds results from user's survey
         var userInput = req.body;
+        console.log("userInput: ", userInput);
         var userScores = userInput.scores;
         // used to calculate difference between the user's score and the scores of each friend in the database
         var totalDifference = 0;

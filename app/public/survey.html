@@ -170,6 +170,8 @@
             <p><a href="/api/friends">Friends API</a> | <a href="https://github.com/8abc/FriendFinder">GitHub</a></p>
         </div>
     </footer>
+    <!-- bootstrap cdn js -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript">
         // Chosen CSS
         var config = {
@@ -219,18 +221,18 @@
           // Create an object for the user"s data
           var userInput = {
             name: $("#name").val(),
-            photo: $("#photo").val(),
+            photo: $("#photoLink").val(),
             scores: [
-              $("#q1").val(),
-              $("#q2").val(),
-              $("#q3").val(),
-              $("#q4").val(),
-              $("#q5").val(),
-              $("#q6").val(),
-              $("#q7").val(),
-              $("#q8").val(),
-              $("#q9").val(),
-              $("#q10").val()
+              $("#question1").val(),
+              $("#question2").val(),
+              $("#question3").val(),
+              $("#question4").val(),
+              $("#question5").val(),
+              $("#question6").val(),
+              $("#question7").val(),
+              $("#question8").val(),
+              $("#question9").val(),
+              $("#question10").val()
             ]
           };
   
